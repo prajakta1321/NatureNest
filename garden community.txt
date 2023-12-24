@@ -51,7 +51,7 @@ Plots: Define the garden plots available, their location, size, status (availabl
 Plants: Maintain a catalog of plants suitable for the garden, including their details such as name, type, planting season, and care instructions.
 Activities: Log various activities performed by members in the garden, such as planting, weeding, watering, etc., associated with specific members and plots.
 Harvests: Record harvested quantities, dates, and the member, plot, and plant associated with each harvest.
-This schema facilitates tracking member involvement, plot allocations, plant management, activities, and harvests within the community garden setting.
+This schema facilitates tracking member involvement, plot allocations, plant management, activities, and harvests within the community garden setting .
 
   +-----------------+         +----------------+       +-------------------+
   |     Members     |         |     Plots      |       |       Plants      |
