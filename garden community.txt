@@ -4,7 +4,7 @@ Tables:
 
 Members:
 
-Member_ID (Primary Key)
+Member_ID
 First Name
 Last Name
 Email
