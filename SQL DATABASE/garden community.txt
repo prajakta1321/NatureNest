@@ -1,0 +1,91 @@
+Creating a database for a community garden involves managing garden plots, members, plant information, activities, and more. Here's an outline for structuring the database:
+
+Tables:
+
+Members:
+
+Member_ID (Primary Key)
+First Name
+Last Name
+Email
+Phone
+Address
+Join_Date
+
+Plots:
+
+Plot_ID (Primary Key)
+Location
+Size
+Status (Available/Occupied)
+Member_ID (Foreign Key referencing Members table, Nullable)
+Plants:
+
+Plant_ID (Primary Key)
+Name
+Type (Vegetable, Flower, etc.)
+Planting_Season
+Care_Instructions
+Activities:
+
+Activity_ID (Primary Key)
+Description
+Date
+Member_ID (Foreign Key referencing Members table)
+Plot_ID (Foreign Key referencing Plots table)
+Harvests:
+
+Harvest_ID (Primary Key)
+Date
+Quantity
+Plant_ID (Foreign Key referencing Plants table)
+Member_ID (Foreign Key referencing Members table)
+Plot_ID (Foreign Key referencing Plots table)
+
+This schema allows for the management of members, garden plots, plant details, activities, and harvest records within the community garden.
+
+Explanation:
+
+Members: Store information about individuals participating in the community garden.
+Plots: Define the garden plots available, their location, size, status (available or allocated), and the member to whom they're allocated (if occupied).
+Plants: Maintain a catalog of plants suitable for the garden, including their details such as name, type, planting season, and care instructions.
+Activities: Log various activities performed by members in the garden, such as planting, weeding, watering, etc., associated with specific members and plots.
+Harvests: Record harvested quantities, dates, and the member, plot, and plant associated with each harvest.
+This schema facilitates tracking member involvement, plot allocations, plant management, activities, and harvests within the community garden setting.
+
+  +-----------------+         +----------------+       +-------------------+
+  |     Members     |         |     Plots      |       |       Plants      |
+  +-----------------+         +----------------+       +-------------------+
+  | Member_ID [PK]  |1----*   | Plot_ID [PK]   |       | Plant_ID [PK]     |
+  | First Name      |         | Location       |       | Name              |
+  | Last Name       |         | Size           |       | Type              |
+  | Email           |         | Status         |       | Planting Season   |
+  | Phone           |         | Member_ID [FK] |-------| Care Instructions |
+  | Address         |         +----------------+       +-------------------+
+  | Join_Date       |
+  +-----------------+
+         |
+         | 1
+         |
+  +-----------------+
+  |   Activities    |
+  +-----------------+
+  | Activity_ID [PK]|
+  | Description     |
+  | Date            |
+  | Member_ID [FK]  |
+  | Plot_ID [FK]    |
+  +-----------------+
+         |
+         | 1
+         |
+  +-----------------+
+  |    Harvests     |
+  +-----------------+
+  | Harvest_ID [PK] |
+  | Date            |
+  | Quantity        |
+  | Plant_ID [FK]   |
+  | Member_ID [FK]  |
+  | Plot_ID [FK]    |
+  +-----------------+
