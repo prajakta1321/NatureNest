@@ -1,3 +1,28 @@
+# 🌱 NatureNest
+
+**NatureNest** is an open-source web application designed to promote sustainable gardening through community involvement. This platform helps users connect, share knowledge, and manage gardening-related data efficiently using modern web technologies.
+
+## 🚀 Project Overview
+
+NatureNest serves as a **Gardening Community Database Integration Platform**, enabling individuals and communities to:
+
+- Maintain a shared garden database
+- Promote eco-friendly practices
+- Access gardening resources and analytics
+- Collaborate on local gardening initiatives
+
+## 🛠 Tech Stack
+
+| Layer        | Technology Used           |
+|--------------|----------------------------|
+| **Frontend** | React.js, CSS, HTML5       |
+| **Backend**  | Django (Python)            |
+| **Database** | MySQL, Google BigQuery     |
+| **Cloud**    | Google Cloud Platform (GCP)|
+| **Other**    | Git, GitHub                |
+
+## 📁 Project Structure
+
 
 ## 🌍 Features
 
